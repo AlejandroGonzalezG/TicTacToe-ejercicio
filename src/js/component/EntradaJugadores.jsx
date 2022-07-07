@@ -55,7 +55,6 @@ const estiloDiv = {
 
 //create your first component
 const EntradaJugadores = (props) => {
-	
 
 	return (
 		<div className="row" style={estiloRow}>	
@@ -65,13 +64,13 @@ const EntradaJugadores = (props) => {
 			</div>
 			<div className="contenedor" style={estiloDiv}>
 				<h2 style={estiloH2}>Choose your weapon</h2>
-				<input type="text" placeholder="Usarname Player 1" handleChange1={(e) => setJugadorUno(e.target.value)} onChange={props.handleChange1}></input>
-				<input type="text" placeholder="Usarname Player 2" handleChange2={(e) => setJugadorDos(e.target.value)} onChange={props.handleChange2}></input>
+				<input type="text" placeholder="Usarname Player 1"  onChange={props.handleChange1}></input>
+				<input type="text" placeholder="Usarname Player 2"  onChange={props.handleChange2}></input>
 				
 			</div>
 			<div className="container"  style={estiloDiv}>
-				<button onClick={() => setJugada("X")} className="elegir1" style={estiloBoton1}>X</button>
-				<button onclick={() => setJugada("O")} className="elegir2" style={estiloBoton2}>O</button>
+				<button onClick={() => props.setJugada("X")} className="elegir1" style={estiloBoton1}>X</button>
+				<button onClick={() => props.setJugada("O")} className="elegir2" style={estiloBoton2}>O</button>
 			</div>		
 		</div>
 	);

@@ -21,9 +21,14 @@ const Home = () =>{
 		setJugadorDos({value});
 	};
 
+    const handleChange3 = (e) => {
+		const { jugada, value } = e.target;
+		setJugada({value});
+	};
+
     return (
     <>
-        {(jugadorUno !== "" && jugadorDos !== "" && jugada !== "") ? <BoardJuego jugada={jugada} /> :  <EntradaJugadores handleChange1={handleChange1} handleChange2={handleChange2} jugadorUno={jugadorUno} jugadorDos={jugadorDos} />}
+        {(jugadorUno !== "" && jugadorDos !== "" && jugada !== "") ? <BoardJuego handleChange3={handleChange3}/> :  <EntradaJugadores handleChange1={handleChange1} handleChange2={handleChange2} handleChange3={handleChange3} jugadorUno={jugadorUno} jugadorDos={jugadorDos} setJugada={setJugada} />}
     </>
     )
 }

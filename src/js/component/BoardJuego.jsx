@@ -26,7 +26,7 @@ const BoardJuego = (props) => {
 		<div className="row" style={estiloRow}>	
 			<div className="container2" style={estiloContainer2}>
 				<h1 className="titulo mx-auto" style={estiloH1} >Tic Tac Toe in React.js</h1>
-                <h2 className="titulo2" style={estiloH1}>Its is {props.jugada} turn!</h2>
+                <h2 className="titulo2" style={estiloH1}>Its is {props.setJugada} turn!</h2>
 			</div>
 				
 		</div>
