@@ -265,7 +265,7 @@ const BoardJuego = (props) => {
 				<h2 className="titulo2" style={estiloH1}>It's {props.jugada} turn!</h2>
 			</div>
 			{largo.length > 4 &&
-				((espacioUno == espacioDos && espacioUno == espacioTres && espacioUno != "") || (espacioCuatro == espacioCinco && espacioCuatro == espacioSeis && espacioCuatro != "") || (espacioSiete == espacioOcho && espacioSiete == espacioNueve && espacioSiete != "") || (espacioUno == espacioCuatro && espacioUno == espacioSiete && espacioCuatro != "") || (espacioDos == espacioCinco && espacioDos == espacioOcho && espacioDos != "") || (espacioTres == espacioSeis == espacioNueve && espacioTres != "") || (espacioUno == espacioCinco && espacioUno == espacioNueve && espacioNueve != "") || (espacioTres == espacioCinco && espacioTres == espacioSiete && espacioSiete != "")) ? (<h1>¡Haz Ganado!</h1>) : null
+				((espacioUno == espacioDos && espacioUno == espacioTres && espacioUno != "") || (espacioCuatro == espacioCinco && espacioCuatro == espacioSeis && espacioCinco != "") || (espacioSiete == espacioOcho && espacioSiete == espacioNueve && espacioOcho != "") || (espacioUno == espacioCuatro && espacioUno == espacioSiete && espacioCuatro != "") || (espacioDos == espacioCinco && espacioDos == espacioOcho && espacioDos != "") || (espacioTres == espacioSeis && espacioSeis== espacioNueve && espacioTres != "") || (espacioUno == espacioCinco && espacioUno == espacioNueve && espacioNueve != "") || (espacioTres == espacioCinco && espacioTres == espacioSiete && espacioSiete != "")) ? (<h1>¡Haz Ganado!</h1>) : null
 			}
 			<div className="container text-center">
 				<div className="row">
