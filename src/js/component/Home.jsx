@@ -7,7 +7,6 @@ import BoardJuego from "./BoardJuego.jsx";
 const Home = () =>{
 
     const [jugada, setJugada] = useState("");
-
 	const [jugadorUno, setJugadorUno] = useState("");
 	const [jugadorDos, setJugadorDos] = useState("");
 
@@ -28,9 +27,9 @@ const Home = () =>{
 
     return (
     <>
-        {(jugadorUno !== "" && jugadorDos !== "" && jugada !== "") ? <BoardJuego handleChange3={handleChange3}/> :  <EntradaJugadores handleChange1={handleChange1} handleChange2={handleChange2} handleChange3={handleChange3} jugadorUno={jugadorUno} jugadorDos={jugadorDos} setJugada={setJugada} />}
+        {(jugadorUno !== "" && jugadorDos !== "" && jugada !== "") ? <BoardJuego handleChange1={handleChange1} handleChange2={handleChange2} handleChange3={handleChange3} jugadorUno={jugadorUno} jugadorDos={jugadorDos} setJugada={setJugada} jugada={jugada}/> : <EntradaJugadores handleChange1={handleChange1} handleChange2={handleChange2} handleChange3={handleChange3} jugadorUno={jugadorUno} jugadorDos={jugadorDos} setJugada={setJugada} jugada={jugada}/>}
     </>
     )
 }
 
-export default Home
+export default Home;
