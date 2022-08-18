@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const estiloRow = {
 	display: "grid",
@@ -257,16 +257,14 @@ const BoardJuego = (props) => {
 			props.setJugada("X")
 		}
 	};
-
 	return (
 		<div className="row" style={estiloRow}>
 			<div className="container2" style={estiloContainer2}>
 				<h1 className="titulo mx-auto" style={estiloH1} >Tic Tac Toe in React.js</h1>
-				<h2 className="titulo2" style={estiloH1}>It's {props.jugada} turn!</h2>
+				{largo.length > 4 &&
+					((espacioUno == espacioDos && espacioUno == espacioTres && espacioUno != "") || (espacioCuatro == espacioCinco && espacioCuatro == espacioSeis && espacioCinco != "") || (espacioSiete == espacioOcho && espacioSiete == espacioNueve && espacioOcho != "") || (espacioUno == espacioCuatro && espacioUno == espacioSiete && espacioCuatro != "") || (espacioDos == espacioCinco && espacioDos == espacioOcho && espacioDos != "") || (espacioTres == espacioSeis && espacioSeis == espacioNueve && espacioTres != "") || (espacioUno == espacioCinco && espacioUno == espacioNueve && espacioNueve != "") || (espacioTres == espacioCinco && espacioTres == espacioSiete && espacioSiete != "")) ? (<h1 style={estiloH1}>¡Haz Ganado!</h1>) : (<h2 className="titulo2" style={estiloH1}>It's {props.jugada} turn!</h2>)
+				}
 			</div>
-			{largo.length > 4 &&
-				((espacioUno == espacioDos && espacioUno == espacioTres && espacioUno != "") || (espacioCuatro == espacioCinco && espacioCuatro == espacioSeis && espacioCinco != "") || (espacioSiete == espacioOcho && espacioSiete == espacioNueve && espacioOcho != "") || (espacioUno == espacioCuatro && espacioUno == espacioSiete && espacioCuatro != "") || (espacioDos == espacioCinco && espacioDos == espacioOcho && espacioDos != "") || (espacioTres == espacioSeis && espacioSeis== espacioNueve && espacioTres != "") || (espacioUno == espacioCinco && espacioUno == espacioNueve && espacioNueve != "") || (espacioTres == espacioCinco && espacioTres == espacioSiete && espacioSiete != "")) ? (<h1>¡Haz Ganado!</h1>) : null
-			}
 			<div className="container text-center">
 				<div className="row">
 					<div className="col-4" style={estiloColumna1} onClick={(e) => handleChangeUno(e)}>{espacioUno}</div>

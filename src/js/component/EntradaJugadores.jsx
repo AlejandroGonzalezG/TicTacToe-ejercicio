@@ -64,8 +64,8 @@ const EntradaJugadores = (props) => {
 			</div>
 			<div className="contenedor" style={estiloDiv}>
 				<h2 style={estiloH2}>Choose your weapon</h2>
-				<input type="text" placeholder="Usarname Player 1" onChange={props.handleChange1}></input>
-				<input type="text" placeholder="Usarname Player 2" onChange={props.handleChange2}></input>
+				<input type="text" placeholder="Username Player 1" onChange={props.handleChange1}></input>
+				<input type="text" placeholder="Username Player 2" onChange={props.handleChange2}></input>
 				
 			</div>
 			<div className="container"  style={estiloDiv}>
